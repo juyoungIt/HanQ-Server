@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="log_data">
+
+    <!--  CREATE  -->
+    <select id="addLogData" parameterType="hashmap">
+        INSERT INTO log_data (event_id, code)
+            VALUES (#{event_id}, #{code});
+    </select>
+
+    <!--  READ  -->
+    <select id="getAllLogData" resultType="com.walab.hanq.model.domain.LogData">
+        SELECT id, event_id, code, is_deleted, reg_date
+            FROM log_data
+            WHERE is_deleted=false;
+    </select>
+    <select id="getLogData"  parameterType="long" resultType="com.walab.hanq.model.domain.LogData">
+        SELECT id, event_id, code, is_deleted, reg_date
+            FROM log_data
+            WHERE id = #{id} AND is_deleted=false;
+    </select>
+
+    <!--  UPDATE  -->
+
+    <!--  DELETE  -->
+    <select id="deleteLogData" parameterType="long">
+        UPDATE log_data
+            SET is_deleted = true
+            WHERE id = #{id};
+    </select>
+
+</mapper>
