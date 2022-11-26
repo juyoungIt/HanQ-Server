@@ -9,7 +9,7 @@
 
     <mvc:cors>
         <mvc:mapping path="/**"
-                     allowed-origins="http://walab.handong.edu, http://localhost:3000"
+                     allowed-origins="http://walab.handong.edu, http://localhost:3000, https://csee.handong.edu"
                      allowed-methods="GET,POST,PUT,DELETE"
         />
     </mvc:cors>

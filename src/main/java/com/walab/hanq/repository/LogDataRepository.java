@@ -28,8 +28,8 @@ public class LogDataRepository {
     public List<LogData> getAllLogData() {
         return sqlSession.selectList(namespace + ".getAllLogData");
     }
-    public LogData getLogData(long id) {
-        return sqlSession.selectOne(namespace + ".getLogData", id);
+    public List<LogData> getLogData(long event_id) {
+        return sqlSession.selectList(namespace + ".getLogData", event_id);
     }
 
     /* UPDATE */

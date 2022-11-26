@@ -18,7 +18,7 @@
     <select id="getLogData"  parameterType="long" resultType="com.walab.hanq.model.domain.LogData">
         SELECT id, event_id, code, is_deleted, reg_date
             FROM log_data
-            WHERE id = #{id} AND is_deleted=false;
+            WHERE event_id = #{event_id} AND is_deleted=false;
     </select>
 
     <!--  UPDATE  -->
