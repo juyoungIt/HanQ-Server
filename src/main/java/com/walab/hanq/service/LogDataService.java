@@ -2,7 +2,6 @@ package com.walab.hanq.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.api.client.util.DateTime;
 import com.walab.hanq.model.domain.LogData;
 import com.walab.hanq.model.dto.AddLogRequestDTO;
 import com.walab.hanq.repository.LogDataRepository;
